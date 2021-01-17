@@ -6,7 +6,7 @@ import ReactFlow, {
     Controls,
 } from 'react-flow-renderer';
 import Sidebar from './Sidebar';
-import './dnd.css';
+import './styles/dnd.css';
 const initialElements = [
     {
         id: '1',
