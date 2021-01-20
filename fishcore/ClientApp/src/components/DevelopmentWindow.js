@@ -38,7 +38,7 @@ function DevelopmentWindow() {
             x: event.clientX - reactFlowBounds.left,
             y: event.clientY - reactFlowBounds.top,
         });
-        const newNode = {
+        const newNode = {  // TODO: Update to use AssessmentComponents stored 
             id: getId(),
             type,
             position,
