@@ -21,7 +21,7 @@ namespace fish_core
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllersWithViews();
+            services.AddControllersWithViews();            
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
