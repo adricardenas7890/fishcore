@@ -7,13 +7,15 @@ import ReactFlow, {
 } from 'react-flow-renderer';
 import Sidebar from './Sidebar';
 import './styles/dnd.css';
+import { ExportButton } from './ExportButton';
+
 const initialElements = [
-    {
-        id: '1',
-        type: 'input',
-        data: { label: 'input node' },
-        position: { x: 250, y: 5 },
-    },
+    //{
+    //    id: '1',
+    //    type: 'input',
+    //    data: { label: 'input node' },
+    //    position: { x: 250, y: 5 },
+    //},
 ];
 let id = 0;
 const getId = () => `dndnode_${id++}`;
@@ -46,6 +48,9 @@ function DevelopmentWindow() {
         };
         setElements((es) => es.concat(newNode));
     };
+
+    console.log(onConnect)
+
     return (
         <div className="dndflow">
             <ReactFlowProvider>
@@ -62,6 +67,7 @@ function DevelopmentWindow() {
                     </ReactFlow>
                 </div>
                 <Sidebar />
+                <ExportButton elements={elements} />
             </ReactFlowProvider>
         </div>
     );

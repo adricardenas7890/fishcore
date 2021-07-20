@@ -12,7 +12,7 @@ export class AssessmentComponents extends Component {
         this.state = {
             comps: [],
             loading: true
-        };
+        };        
     }
 
     // Initiates the Fetch
@@ -26,9 +26,7 @@ export class AssessmentComponents extends Component {
             <div className={"dndnode " + comp[2]} onDragStart={(event) => AssessmentComponents.onDragStart(event, comp[2])} draggable>
                 <span>{comp[0]}</span>
             </div>
-        );
-
-        console.log(content)
+        );        
 
         return content;
     }
@@ -36,7 +34,7 @@ export class AssessmentComponents extends Component {
     render() {
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
-            : AssessmentComponents.renderAssessmentComponent(this.state.comps);
+            : AssessmentComponents.renderAssessmentComponent(this.state.comps);        
 
         return (
             <>
@@ -51,7 +49,7 @@ export class AssessmentComponents extends Component {
 
         this.setState(state => {
             const comps = data.map((item, i) => [item.Name, item.Description, item.Direction]);
-
+            
             return {
                 comps,loading:false
             };
